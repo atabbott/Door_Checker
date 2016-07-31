@@ -3,7 +3,7 @@ import MySQLdb
 # define what to do if a door is open (1 = closed, 0 = open)
 def updateDoorStatus(state,door):
   # connect to the database
-  db = MySQLdb.connect("localhost","piDoor","1234","garage_door")
+  db = MySQLdb.connect("localhost","USERNAME","PASSWORD","DATABASE")
   # setup cursor
   cursor = db.cursor()
   try:
