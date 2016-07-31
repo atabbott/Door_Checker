@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file:///Library/WebServer/Documents/garage_door/Android_app/garage_door/app/app.iml" filepath="/Library/WebServer/Documents/garage_door/Android_app/garage_door/app/app.iml" />
+      <module fileurl="file:///Library/WebServer/Documents/garage_door/Android_app/garage_door/garage_door.iml" filepath="/Library/WebServer/Documents/garage_door/Android_app/garage_door/garage_door.iml" />
+    </modules>
+  </component>
+</project>
