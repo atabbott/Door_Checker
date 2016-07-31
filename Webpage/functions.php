@@ -1,7 +1,7 @@
 <?php
 
 function connect(){
-  $conn = new mysqli('localhost', 'piDoor', '1234','garage_door');
+  $conn = new mysqli('localhost', 'USERNAME', 'PASSWORD','DATABASENAME');
   if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
   }
