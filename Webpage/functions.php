@@ -15,7 +15,7 @@ function testDoor1(){
   if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-      if ($row['door_status'] == 1){
+      if ($row['door_status'] == 0){
         echo "<img src='images/open.jpg' alt='OPEN' height='100pc' width='100pc'/>";
         echo "<p>OPEN</p>";
       }
@@ -35,7 +35,7 @@ function testDoor2(){
   if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-      if ($row['door_status'] == 1){
+      if ($row['door_status'] == 0){
         echo "<img src='images/open.jpg' alt='OPEN' height='100pc' width='100pc'/>";
         echo "<p>OPEN</p>";
       }
