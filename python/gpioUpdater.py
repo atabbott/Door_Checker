@@ -18,7 +18,7 @@ while True:
   else:
     if leftDoorState == True:
       leftDoorState = False
-      updateDoorStatus(1,1)
+      updateDoorStatus(0,1)
 
   # door 2
   if rightDoor.is_pressed:

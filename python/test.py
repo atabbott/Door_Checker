@@ -24,7 +24,7 @@ while nq:
     else:
       if leftDoorState == True:
         leftDoorState = False
-        updateDoorStatus(1,1)
+        updateDoorStatus(0,1)
 
     # door 2
     if sateD2 == "1":
