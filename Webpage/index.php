@@ -22,10 +22,10 @@ require_once('functions.php');
     </tr>
     <tr>
       <td>
-        <?php testDoor1(); ?>
+        <?php testDoor(1); ?>
       </td>
       <td>
-        <?php testDoor2(); ?>
+        <?php testDoor(2); ?>
       </td>
     </tr>
   </table>
