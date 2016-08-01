@@ -1,41 +1,31 @@
-import java.sql.*;
+import java.net.URL;
+import java.net.URLConnection;
+import java.io.*;
+import java.util.HashMap;
 
-public class Connect{
 
-  static Connection con = null;
+public class Connect {
+  private static HashMap<String,Integer> status;
 
-  public static void main(String[] args) {
-    test();
-  }
+  public static void main(String[] args){
 
-  public static void test(){
-    connect();
-  }
-
-  public static Boolean connect(){
-    final String host = "jdbc:mysql://localhost/garage_door";
-    final String username = "piDoor";
-    final String password = "1234";
-
+    status = new HashMap<String,Integer>();
     try{
-      Class.forName("COM.MYSQL.JDBC.DRIVER");
-      con = DriverManager.getConnection(host,username,password);
-    }
-    catch(SQLException e){
-      System.out.println(e.getMessage());
-    }
+      URL url = new URL("http://localhost/garage_door/webpage/api/get_state.php");
+      URLConnection connection = url.openConnection();
+
+      InputStream in = connection.getInputStream();
+      BufferedReader res = new BufferedReader(new InputStreamReader(in, "UTF-8"));
+
+      String inputLine= res.readLine();
+      res.close();
+
+      System.out.println(inputLine);
+      status = new HashMap<String,Integer>(inputLine);
+    }//end try
     catch(Exception e){
-      System.out.println(e.getMessage());
-    }
+      System.err.println(e.getMessage());
+    }//end catch
 
-    if (con == null){
-      System.out.println("not connected");
-    }
-    else{
-      System.out.println("Connected");
-    }
-
-
-    return true;
-  }
-}
+  }//end main
+}//end class
