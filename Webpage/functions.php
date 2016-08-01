@@ -9,6 +9,12 @@ function connect(){
   return $conn;
 }
 
+function updateDoorState(door,state){
+  $conn = connect();
+  $sql = "UPDATE `door_status` SET `door_status`=$state WHERE `door_id`=$door";
+  return $conn->query($sql);
+}
+
 function testDoor(door){
   $conn = connect();
   $sql = "SELECT door_status FROM door_status WHERE door_id=".str($door);
